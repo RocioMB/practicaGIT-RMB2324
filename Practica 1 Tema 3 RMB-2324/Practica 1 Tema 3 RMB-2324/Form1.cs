@@ -20,7 +20,8 @@ namespace Practica_1_Tema_3_RMB_2324
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            //!? RMB2324 Cambiamos la inicialización de tipoTelegrama a 'o'
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
 
@@ -30,21 +31,30 @@ namespace Practica_1_Tema_3_RMB_2324
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
             // Obtengo el numero de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            //!? RMB2324 Utilizamos el método Split de la clase string
+            //!? que devuelve un vector
+            //!? y contamos los elementos de dicho vector con el método Length
+            char[] delimitadores = new char[] { ' ', '\r', '\n' };
+            numPalabras = textoTelegrama.
+                Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
 
             // Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25; 
+                    //!? RMB2324 Cambiamos asignación de coste
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;  
+                    //!? RMB2324 Ponemos el cáculo correcto correcto
+                    coste = 2.5 + (0.5 * (numPalabras - 10));
             else
-                // Si el telegrama es urgente
+            // Si el telegrama es urgente
                 if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
                     coste = 5;
                 else
-                    coste = 5 + 0.75 * (numPalabras - 10);
+                    //!? RMB2324 Ponemos un breakpoint condicional
+                    coste = 5 + (0.75 * (numPalabras - 10));
+
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
