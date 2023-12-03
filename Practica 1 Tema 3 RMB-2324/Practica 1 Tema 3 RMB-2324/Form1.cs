@@ -27,13 +27,17 @@ namespace Practica_1_Tema_3_RMB_2324
             // Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            //!? RMB2324 Se realizan los cambios
+            //!? para los radio buttons
+            if (radioBUrgente.Checked)
                 tipoTelegrama = 'u';
+            if (radioBOrdinario.Checked)
+                tipoTelegrama = 'o';
             // Obtengo el numero de palabras que forma el telegrama
             numPalabras = textoTelegrama.Length;
 
             // Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if(tipoTelegrama == 'o')
                 if (numPalabras <= 10)
                     coste = 25; 
                 else

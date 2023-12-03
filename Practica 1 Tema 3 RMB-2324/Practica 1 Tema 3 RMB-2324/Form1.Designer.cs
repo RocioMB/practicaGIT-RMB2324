@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.txtTelegrama = new System.Windows.Forms.TextBox();
-            this.cbUrgente = new System.Windows.Forms.CheckBox();
             this.textoLabel = new System.Windows.Forms.Label();
             this.costeLabel = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.radioBOrdinario = new System.Windows.Forms.RadioButton();
+            this.radioBUrgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // txtTelegrama
@@ -43,16 +44,6 @@
             this.txtTelegrama.Name = "txtTelegrama";
             this.txtTelegrama.Size = new System.Drawing.Size(600, 158);
             this.txtTelegrama.TabIndex = 11;
-            // 
-            // cbUrgente
-            // 
-            this.cbUrgente.AutoSize = true;
-            this.cbUrgente.Location = new System.Drawing.Point(99, 294);
-            this.cbUrgente.Name = "cbUrgente";
-            this.cbUrgente.Size = new System.Drawing.Size(102, 24);
-            this.cbUrgente.TabIndex = 10;
-            this.cbUrgente.Text = "Urgente?";
-            this.cbUrgente.UseVisualStyleBackColor = true;
             // 
             // textoLabel
             // 
@@ -89,13 +80,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // radioBOrdinario
+            // 
+            this.radioBOrdinario.AutoSize = true;
+            this.radioBOrdinario.Location = new System.Drawing.Point(106, 294);
+            this.radioBOrdinario.Name = "radioBOrdinario";
+            this.radioBOrdinario.Size = new System.Drawing.Size(98, 24);
+            this.radioBOrdinario.TabIndex = 12;
+            this.radioBOrdinario.TabStop = true;
+            this.radioBOrdinario.Text = "Ordinario";
+            this.radioBOrdinario.UseVisualStyleBackColor = true;
+            // 
+            // radioBUrgente
+            // 
+            this.radioBUrgente.AutoSize = true;
+            this.radioBUrgente.Location = new System.Drawing.Point(232, 294);
+            this.radioBUrgente.Name = "radioBUrgente";
+            this.radioBUrgente.Size = new System.Drawing.Size(92, 24);
+            this.radioBUrgente.TabIndex = 13;
+            this.radioBUrgente.TabStop = true;
+            this.radioBUrgente.Text = "Urgente";
+            this.radioBUrgente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioBUrgente);
+            this.Controls.Add(this.radioBOrdinario);
             this.Controls.Add(this.txtTelegrama);
-            this.Controls.Add(this.cbUrgente);
             this.Controls.Add(this.textoLabel);
             this.Controls.Add(this.costeLabel);
             this.Controls.Add(this.txtPrecio);
@@ -110,11 +124,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtTelegrama;
-        private System.Windows.Forms.CheckBox cbUrgente;
         private System.Windows.Forms.Label textoLabel;
         private System.Windows.Forms.Label costeLabel;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioBOrdinario;
+        private System.Windows.Forms.RadioButton radioBUrgente;
     }
 }
 
