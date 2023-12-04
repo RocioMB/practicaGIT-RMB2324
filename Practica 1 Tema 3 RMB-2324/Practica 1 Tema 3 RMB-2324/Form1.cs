@@ -43,24 +43,27 @@ namespace Practica_1_Tema_3_RMB_2324
                 Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
 
             // Si el telegrama es ordinario
-            if(tipoTelegrama == 'o')
+            if(tipoTelegrama == 'o') {
                 if (numPalabras <= 10)
                     //!? RMB2324 Cambiamos asignación de coste
                     coste = 2.5;
                 else
                     //!? RMB2324 Ponemos el cáculo correcto correcto
                     coste = 2.5 + (0.5 * (numPalabras - 10));
-            else
-            // Si el telegrama es urgente
-                if (tipoTelegrama == 'u')
-                if (numPalabras <= 10)
-                    coste = 5;
+            }
+            else { 
+            //!? RMB2324 Ponemos llaves en todos los if else
+                if (tipoTelegrama == 'u'){
+                    if (numPalabras <= 10)
+                        coste = 5;
+                    else
+                        //!? RMB2324 Ponemos un breakpoint condicional
+                        coste = 5 + (0.75 * (numPalabras - 10));
+                }
                 else
-                    //!? RMB2324 Ponemos un breakpoint condicional
-                    coste = 5 + (0.75 * (numPalabras - 10));
+                    coste = 0;
+            }
 
-            else
-                coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
         }
     }
