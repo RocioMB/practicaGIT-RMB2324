@@ -21,7 +21,7 @@ namespace Practica_1_Tema_3_RMB_2324
         {
             string textoTelegrama;
             //!? RMB2324 Cambiamos la inicialización de tipoTelegrama a 'o'
-            char tipoTelegrama = 'o';
+            char tipoTelegrama = ' ';
             int numPalabras = 0;
             double coste;
 
